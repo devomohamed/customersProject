@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <div class="left">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+  </div>
+  <div class="right">
+    <a routerLink="/addcustomer">add Customer</a>
+    <a routerLink="/">Customers List</a>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" #sidenav>
+    <a routerLink="/addcustomer">add Customer</a>
+    <a routerLink="/">Customers List</a>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer></app-footer>
